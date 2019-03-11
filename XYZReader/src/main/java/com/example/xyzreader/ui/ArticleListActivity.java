@@ -215,7 +215,7 @@ public class ArticleListActivity extends AppCompatActivity implements
                                 if (darkMuted != null) {
                                     holder.cardView.setCardBackgroundColor(darkMuted.getRgb());
                                 } else {
-                                    //dark muted colors don't exist, you can try to find dark vibrant swatches
+                                    //dark muted colors don't exist, try to find dark vibrant swatches
                                     //or set a default color..
                                     Palette.Swatch darkVibrant = palette.getDarkVibrantSwatch();
                                     if (darkVibrant != null) {
