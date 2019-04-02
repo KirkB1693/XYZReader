@@ -4,13 +4,13 @@
     android:id="@+id/coordinator_detail_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:clipToPadding="false"
-    android:fitsSystemWindows="true">
+    android:paddingTop="24dp"
+    android:clipToPadding="false">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar_container"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="100dp"
         android:elevation="@dimen/app_bar_elevation"
         android:fitsSystemWindows="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
@@ -25,49 +25,56 @@
             android:fitsSystemWindows="true"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-            <FrameLayout
-                android:id="@+id/photo_container"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fitsSystemWindows="true"
-                android:background="@color/photo_placeholder"
-                >
-                <!--suppress AndroidLintContentDescription -->
-                <ImageView
-                    android:id="@+id/photo"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop" />
-
-            </FrameLayout>
-
-            <include layout="@layout/detail_toolbar"/>
+            <include layout="@layout/detail_toolbar" />
 
         </android.support.design.widget.CollapsingToolbarLayout>
+
     </android.support.design.widget.AppBarLayout>
 
-    <android.support.v4.widget.NestedScrollView
-        android:id="@+id/scrollview"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal">
 
 
-        <include layout="@layout/article_detail_body"/>
+        <FrameLayout
+            android:id="@+id/photo_container"
+            android:layout_width="@dimen/detail_photo_height"
+            android:layout_height="match_parent"
+            android:background="@color/photo_placeholder"
+            android:fitsSystemWindows="true">
+            <!--suppress AndroidLintContentDescription -->
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+        </FrameLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 
-    </android.support.v4.widget.NestedScrollView>
+            <include layout="@layout/article_detail_body" />
+
+
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/share_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
         android:layout_marginRight="@dimen/fab_margin"
         android:layout_marginBottom="@dimen/fab_margin"
-        app:layout_anchorGravity="bottom|right|end"
         android:contentDescription="@string/action_share"
-        app:layout_anchor="@id/app_bar_container"
         android:elevation="@dimen/fab_elevation"
         android:src="@drawable/ic_share"
         android:stateListAnimator="@animator/fab_state_list_anim" />
