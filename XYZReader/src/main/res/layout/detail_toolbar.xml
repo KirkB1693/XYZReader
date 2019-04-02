@@ -14,7 +14,7 @@
     <LinearLayout
         android:id="@+id/meta_bar"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="@dimen/detail_metabar_height"
         android:background="@color/photo_placeholder"
         android:orientation="vertical"
         android:paddingLeft="@dimen/detail_inner_horiz_margin"

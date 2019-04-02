@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+<!--FrameLayout is necessary for correct calculation of size of textview
+    otherwise the bottom of the text is cut off when scrolled-->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+
+<TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/article_body"
@@ -16,3 +24,5 @@
     android:textSize="@dimen/detail_body_text_size">
 
 </TextView>
+
+</FrameLayout>
