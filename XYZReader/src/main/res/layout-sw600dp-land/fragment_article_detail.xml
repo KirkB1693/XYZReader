@@ -2,17 +2,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/coordinator_detail_layout"
-    android:layout_width="1008dp"
-    android:layout_height="584dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:clipToPadding="false"
-    android:paddingTop="24dp"
-    tools:layout_editor_absoluteX="8dp"
-    tools:layout_editor_absoluteY="8dp">
+    android:paddingTop="24dp">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar_container"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="@dimen/detail_metabar_height"
         android:elevation="@dimen/app_bar_elevation"
         android:fitsSystemWindows="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
