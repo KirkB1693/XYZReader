@@ -31,6 +31,8 @@ import android.graphics.Paint;
 import android.graphics.PixelFormat;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.transition.Transition;
 import android.transition.TransitionValues;
 import android.util.AttributeSet;
@@ -65,12 +67,15 @@ public class TextResize extends Transition {
     };
 
     public TextResize() {
-        addTarget(TextView.class);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            addTarget(TextView.class);
+        }
     }
 
     /**
      * Constructor used from XML.
      */
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public TextResize(Context context, AttributeSet attrs) {
         super(context, attrs);
         addTarget(TextView.class);
@@ -455,10 +460,10 @@ public class TextResize extends Transition {
                 case Gravity.CENTER_HORIZONTAL:
                 case Gravity.CENTER_VERTICAL:
                     return ((start + end) - (dim * scale))/2f;
-                case Gravity.RIGHT:
+                case Gravity.END:
                 case Gravity.BOTTOM:
                     return end - (dim * scale);
-                case Gravity.LEFT:
+                case Gravity.START:
                 case Gravity.TOP:
                 default:
                     return start;

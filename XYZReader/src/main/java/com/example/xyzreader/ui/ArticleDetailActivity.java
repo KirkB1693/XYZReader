@@ -201,7 +201,6 @@ public class ArticleDetailActivity extends AppCompatActivity
                 mCurrentFragment = (Fragment) object;
             }
             if (object instanceof ArticleDetailFragment) {
-                int mCurrentPosition = position;
                 mSharedElementCallback.setSharedElementViews(findViewById(R.id.photo), findViewById(R.id.detail_article_title), findViewById(R.id.detail_article_byline));
 
             }

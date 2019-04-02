@@ -64,7 +64,6 @@ public class ArticleListActivity extends AppCompatActivity implements
     SwipeRefreshLayout mSwipeRefreshLayout;
     @BindView(R.id.recycler_view)
     RecyclerView mRecyclerView;
-    public static Context mContext;
 
     private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.sss");
     // Use default locale format
@@ -80,7 +79,6 @@ public class ArticleListActivity extends AppCompatActivity implements
         setupTransition();
 
         ButterKnife.bind(this);
-        mContext = getApplicationContext();
 
 
         adapter = new Adapter(null);
@@ -442,7 +440,7 @@ public class ArticleListActivity extends AppCompatActivity implements
         public ViewHolder(View view) {
             super(view);
             ButterKnife.bind(this, view);
-            imageLoaderHelper = ImageLoaderHelper.getInstance(ArticleListActivity.mContext);
+            imageLoaderHelper = ImageLoaderHelper.getInstance(view.getContext());
         }
     }
 }

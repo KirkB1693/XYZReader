@@ -13,7 +13,8 @@
         android:layout_height="300dp"
         android:elevation="@dimen/app_bar_elevation"
         android:fitsSystemWindows="true"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        tools:targetApi="lollipop">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/collapsing_toolbar"
@@ -63,13 +64,14 @@
         android:id="@+id/share_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="@dimen/fab_margin"
         app:layout_anchorGravity="bottom|right|end"
         android:contentDescription="@string/action_share"
         app:layout_anchor="@id/app_bar_container"
         android:elevation="@dimen/fab_elevation"
         android:src="@drawable/ic_share"
-        android:stateListAnimator="@animator/fab_state_list_anim" />
+        android:stateListAnimator="@animator/fab_state_list_anim"
+        tools:targetApi="lollipop" />
 
 </android.support.design.widget.CoordinatorLayout>

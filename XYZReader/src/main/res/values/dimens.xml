@@ -12,5 +12,7 @@
     <dimen name="card_margin">4dp</dimen>
     <dimen name="card_corner_radius">4dp</dimen>
     <dimen name="card_content_padding">4dp</dimen>
+    <dimen name="appbar_elevation">8dp</dimen>
+    <dimen name="appbar_height">112dp</dimen>
 
 </resources>
