@@ -5,15 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToPadding="false"
-    android:paddingTop="24dp"
-    tools:layout_editor_absoluteX="8dp"
-    tools:layout_editor_absoluteY="8dp">
+    android:paddingTop="@dimen/status_bar_height">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar_container"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:elevation="@dimen/app_bar_elevation"
+        android:layout_height="@dimen/detail_metabar_height"
+        android:elevation="@dimen/appbar_elevation"
         android:fitsSystemWindows="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         tools:targetApi="lollipop">
@@ -38,7 +36,7 @@
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="@dimen/detail_metabar_height"
         android:orientation="horizontal">
 
 
@@ -65,10 +63,10 @@
             android:layout_marginTop="@dimen/detail_card_top_margin"
             android:layout_marginBottom="@dimen/detail_card_bottom_margin"
             android:elevation="@dimen/card_elevation"
-            app:cardCornerRadius="4dp"
+            app:cardCornerRadius="@dimen/card_corner_radius"
             app:cardElevation="@dimen/card_elevation"
             app:cardPreventCornerOverlap="true"
-            app:contentPadding="4dp"
+            app:contentPadding="@dimen/card_content_padding"
             tools:targetApi="lollipop">
 
             <android.support.v4.widget.NestedScrollView

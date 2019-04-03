@@ -10,8 +10,8 @@
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar_container"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:elevation="@dimen/app_bar_elevation"
+        android:layout_height="@dimen/detail_appbar_height"
+        android:elevation="@dimen/appbar_elevation"
         android:fitsSystemWindows="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         tools:targetApi="lollipop">
@@ -24,12 +24,14 @@
             app:collapsedTitleTextAppearance="@style/TextAppearance.Design.CollapsingToolbar.Expanded"
             app:contentScrim="@color/primary"
             android:fitsSystemWindows="true"
+            android:clipToPadding="false"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <FrameLayout
                 android:id="@+id/photo_container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/status_bar_height"
                 android:fitsSystemWindows="true"
                 android:background="@color/photo_placeholder"
                 >
@@ -42,7 +44,7 @@
 
             </FrameLayout>
 
-            <include layout="@layout/detail_toolbar"/>
+            <include layout="@layout/detail_toolbar" />
 
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>

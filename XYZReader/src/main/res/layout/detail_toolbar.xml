@@ -8,7 +8,8 @@
     android:layout_gravity="bottom"
     app:layout_collapseMode="pin"
     app:popupTheme="@style/Theme.AppCompat.Light"
-    android:minHeight="100dp"
+    android:clipToPadding="false"
+    android:minHeight="@dimen/detail_metabar_height"
     android:fitsSystemWindows="true">
 
     <LinearLayout
@@ -25,10 +26,8 @@
 
         <TextView
             android:id="@+id/detail_article_title"
-            style="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-condensed"
             android:textColor="@android:color/white"
             android:textStyle="bold"
             android:textSize="@dimen/detail_title_text_size"
