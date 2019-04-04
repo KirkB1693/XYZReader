@@ -8,6 +8,7 @@
     android:elevation="@dimen/card_elevation"
     android:clickable="true"
     android:focusable="true"
+    android:stateListAnimator="@animator/lift_on_touch"
     android:foreground="?selectableItemBackground"
     tools:targetApi="lollipop">
 

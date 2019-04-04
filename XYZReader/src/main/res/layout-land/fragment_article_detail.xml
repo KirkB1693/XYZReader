@@ -79,6 +79,7 @@
         android:elevation="@dimen/fab_elevation"
         android:src="@drawable/ic_share"
         android:stateListAnimator="@animator/fab_state_list_anim"
-        tools:targetApi="lollipop" />
+        tools:targetApi="lollipop"
+        android:layout_marginRight="@dimen/fab_margin" />
 
 </android.support.design.widget.CoordinatorLayout>
